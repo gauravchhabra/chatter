@@ -1,0 +1,68 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rect2985"
+    tools:context=".MainChat"
+    android:id="@+id/">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="left|top"
+        android:id="@+id/outline">
+
+        <LinearLayout
+            android:id="@+id/toptab"
+            android:background="@drawable/rect5509"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/backtocontacts"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/contactname"
+                android:layout_toRightOf="@+id/backtocontacts"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/chatboxlay"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="415dp">
+            <ListView
+                android:id="@+id/chatbox"
+                android:layout_below="@+id/toptab"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:fastScrollEnabled="true"></ListView>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <EditText
+                android:id="@+id/sendtext"
+                android:background="@drawable/rect5392"
+                android:layout_width="325dp"
+                android:layout_height="fill_parent" />
+            <Button
+                android:background="@drawable/g5506"
+                android:layout_toLeftOf="@+id/sendtext"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
